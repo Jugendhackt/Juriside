@@ -1,0 +1,24 @@
+html {
+  background-image: url("");
+  font-size: 12pt;
+  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  line-height: 1.5;
+}
+body {
+  background-color:rgba(255,255,255,0.4);
+  margin: auto;
+  max-width: 90ex;
+  padding: 1ex;
+}
+img {
+  max-width: 150px;
+  transform: rotate(5deg);
+}
+
+pre {
+  color: rgb(0,0,255);
+}
+
+a.noline {
+  text-decoration: none;
+}
