@@ -7,7 +7,7 @@ html {
 body {
   background-color:rgba(255,255,255,0.4);
   margin: auto;
-  max-width: 100%;
+  max-width: 90ex;
   padding: 1ex;
 }
 img {
