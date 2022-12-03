@@ -7,12 +7,12 @@ html {
 body {
   background-color:rgba(255,255,255,0.4);
   margin: auto;
-  max-width: 90ex;
+  max-width: 100%;
   padding: 1ex;
 }
 img {
   max-width: 150px;
-  transform: rotate(5deg);
+  transform: rotate(0deg);
 }
 
 pre {
