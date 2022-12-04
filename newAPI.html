@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <button onclick="myFunction('person')">Person</button>
+    <button onclick="myFunction('gegenstand')">Gegenstand</button>
+    <script>
+        function myFunction(button) {
+            //Sendet ein anfrage an die API und speichert die Antwort in eine Variable
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", "https://de.openlegaldata.io/api/laws/search/?text="+button, false); // false for synchronous request
+            xmlHttp.send(null); //"Null" bedeutet kein Body in der Anfrage
+            var answer = xmlHttp.responseText;
+            //Übersetzt die Antwort in ein JSON-Objekt 
+            const json = JSON.parse(answer);
+            var results = json.results; //Das heißt auf Werte wie Results kann dierekt zugegriffen werden.
+            for (result of results) {
+                console.log(result);
+                var text = document.createElement('p');
+                text.innerHTML = result.text;
+                document.body.appendChild(text);
+            }
+        }
+    </script>
+</body>
+
+</html>
